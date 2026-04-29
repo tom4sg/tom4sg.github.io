@@ -190,6 +190,27 @@
       line-height: 1.9;
     }
 
+    /* ── TOP NAV ── */
+    .top-nav {
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .top-nav a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      border: 0.5px solid var(--border);
+      padding: 0.3rem 0.7rem;
+    }
+
+    .top-nav a:hover {
+      color: var(--text);
+      border-color: var(--muted);
+    }
+
     /* ── FOOTER ── */
     .footer {
       font-size: 0.75rem;
@@ -215,6 +236,10 @@
   </style>
 </head>
 <body>
+  <nav class="top-nav">
+    <a href="resume.pdf" download>resume &darr;</a>
+  </nav>
+
   <main>
 
     <!-- HERO -->
