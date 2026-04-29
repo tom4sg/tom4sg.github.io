@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomas Gutierrez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f9f8f6;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e0e0e0;
+      --tag-bg: #f0efed;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --text: #e8e8e8;
+        --muted: #666;
+        --border: #2a2a2a;
+        --tag-bg: #1e1e1e;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 3rem 1.5rem;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    /* Section label */
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── HERO ── */
+    .hero-name {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-tagline {
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .hero-links a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--border);
+      padding-bottom: 1px;
+    }
+
+    .hero-links a:hover {
+      border-bottom-color: var(--text);
+    }
+
+    /* ── ABOUT ── */
+    .about-text {
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+    /* ── EXPERIENCE ── */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 0 1.5rem;
+    }
+
+    .exp-date {
+      font-size: 0.75rem;
+      color: var(--muted);
+      padding-top: 0.15rem;
+      line-height: 1.5;
+    }
+
+    .exp-role {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .exp-company {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .exp-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    /* ── PROJECTS ── */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .project-card {
+      border: 0.5px solid var(--border);
+      padding: 1.1rem 1.2rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .project-card:hover {
+      border-color: var(--muted);
+    }
+
+    .project-title {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .project-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      border: 0.5px solid var(--border);
+      background: var(--tag-bg);
+      color: var(--muted);
+    }
+
+    /* ── STACK ── */
+    .stack-list {
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 3rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 540px) {
+      .exp-item {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+      }
+
+      .exp-date {
+        margin-bottom: 0.1rem;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <!-- HERO -->
+    <section>
+      <h1 class="hero-name">Tomas Gutierrez</h1>
+      <p class="hero-tagline">MS Data Science @ NYU &middot; DS/ML for entertainment tech</p>
+      <p class="hero-tagline">New York, NY &middot; <a href="mailto:teg8352@nyu.edu" style="color:inherit;text-decoration:none;border-bottom:0.5px solid var(--border)">teg8352@nyu.edu</a></p>
+      <nav class="hero-links" style="margin-top:1rem">
+        <a href="https://github.com/tom4sg" target="_blank" rel="noopener">github.com/tom4sg</a>
+        <a href="https://linkedin.com/in/tomeg" target="_blank" rel="noopener">linkedin.com/in/tomeg</a>
+      </nav>
+    </section>
+
+    <hr />
+
+    <!-- ABOUT -->
+    <section>
+      <p class="label">About</p>
+      <p class="about-text">I'm a data scientist passionate about applying ML to entertainment and music tech. Incoming MS student at NYU CDS, and incoming DS intern at Disney Streaming. Originally from New York — family from Venezuela &#x1F1FB;&#x1F1EA;.</p>
+    </section>
+
+    <hr />
+
+    <!-- EXPERIENCE -->
+    <section>
+      <p class="label">Experience</p>
+      <div class="experience-list">
+
+        <div class="exp-item">
+          <div class="exp-date">Jun 2026 –<br>Aug 2026</div>
+          <div>
+            <div class="exp-role">Data Science Intern</div>
+            <div class="exp-company">The Walt Disney Company &middot; Disney Streaming</div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Sep 2025 –<br>May 2026</div>
+          <div>
+            <div class="exp-role">Undergraduate Researcher</div>
+            <div class="exp-company">NYU Center for Data Science</div>
+            <div class="exp-desc">DURF grant — ML for Hot 100 song lifespan prediction using social media features and 5+ years of chart data.</div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">May 2025 –<br>Aug 2025</div>
+          <div>
+            <div class="exp-role">Data Science Intern</div>
+            <div class="exp-company">Flite</div>
+            <div class="exp-desc">Built Flite AI agentic chatbot; fine-tuned Mistral 7B; LangGraph multi-agent pipeline at 94% relevancy.</div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Feb 2024 –<br>Aug 2024</div>
+          <div>
+            <div class="exp-role">A&amp;R Research Intern</div>
+            <div class="exp-company">Warner Music Group</div>
+            <div class="exp-desc">Signed 2 artists; flagged signings that went on to 1.5B+ Spotify streams.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- PROJECTS -->
+    <section>
+      <p class="label">Projects</p>
+      <div class="project-grid">
+
+        <a class="project-card" href="https://github.com/tom4sg/nyu-corner-datathon-2025" target="_blank" rel="noopener">
+          <div class="project-title">NYU Datathon &mdash; 1st Place</div>
+          <div class="project-desc">RAG system matching vague user queries to venues, reviews, and image data.</div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pinecone</span>
+            <span class="tag">CLIP</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/tom4sg/tomasBot" target="_blank" rel="noopener">
+          <div class="project-title">TomasBot</div>
+          <div class="project-desc">DND auto-responder using macOS SQLite + Google Calendar API + Claude 3.5 for smart replies.</div>
+          <div class="project-tags">
+            <span class="tag">Flask</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Claude</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/tom4sg/rmp-data-science-capstone" target="_blank" rel="noopener">
+          <div class="project-title">Rate My Professor</div>
+          <div class="project-desc">Analyzed 80K+ ratings for gender/discipline bias; logistic regression with AUC 0.80.</div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">scikit-learn</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/tom4sg/Newser" target="_blank" rel="noopener">
+          <div class="project-title">Newser</div>
+          <div class="project-desc">LangChain ReAct agent for daily news briefings via Claude, NewsAPI, and Tavily search.</div>
+          <div class="project-tags">
+            <span class="tag">LangChain</span>
+            <span class="tag">Claude</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- STACK -->
+    <section>
+      <p class="label">Stack</p>
+      <div class="stack-list">
+        Python &middot; SQL &middot; PyTorch &middot; LangChain/LangGraph &middot; scikit-learn &middot; FastAPI &middot; AWS &middot; Docker &middot; PostgreSQL &middot; MongoDB
+      </div>
+    </section>
+
+    <hr />
+
+    <footer class="footer">
+      &copy; 2026 Tomas Gutierrez
+    </footer>
+
+  </main>
+</body>
+</html>
